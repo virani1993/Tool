@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  pdf_tool:
+    container_name: pdf_tool
+    build:
+      context: .
+    volumes:
+      - .:/mnt
+    ports:
+      - 8501:8501
+    command:  streamlit run tool.py
